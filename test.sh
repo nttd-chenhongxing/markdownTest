@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 # Simple test script to validate markdown files
 
 echo "Running markdown tests..."
@@ -36,7 +37,7 @@ else
 fi
 
 # Verify test.md contains tables
-if grep -q "|" test.md; then
+if grep -qE '^\s*\|.*\|$' test.md; then
     echo "✓ test.md contains table syntax"
 else
     echo "✗ test.md missing table syntax"
