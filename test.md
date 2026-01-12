@@ -23,3 +23,28 @@
     | ショップニュース | ID | 降順 |
 
 ※上位　4件のみ取得、受領した画面イメージより画面には4件のみ表示させる。  
+
+
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+    
+    CUSTOMER {
+        string name
+        string custNumber
+        string sector
+    }
+    
+    ORDER {
+        int orderNumber
+        string deliveryAddress
+    }
+
+    LINE-ITEM {
+        string productCode
+        int quantity
+        float pricePerUnit
+    }
+```
