@@ -1,1 +1,13 @@
-MarkdownTest
+# MarkdownTest
+
+A repository for testing markdown files with different encodings.
+
+## Files
+- `test.md` - UTF-8 encoded markdown with Japanese text and tables
+- `test-sjis.md` - Shift-JIS encoded markdown file
+- `test.sh` - Test script to validate markdown files
+
+## Running Tests
+```bash
+./test.sh
+```
